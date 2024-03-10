@@ -21,28 +21,7 @@
 	<div class="header">
 	<h2>Home Page</h2>
 	</div>
-	<!-- <br><br><br><br><br><br>
-    <center><P>Home Page</p></center>
-	<br><br>
-	<div class="container">
-	<div class="box">
-		<h2><a href="customer.php">CUSTOMER</a></h2>
-		<p>Manage your customer information here.</p>
-	</div>
-	<div class="box">
-		<h2><a href="employee.php">EMPLOYEE</a></h2>
-		<p>Access employee-related functions.</p>
-	</div>
-	<div class="box">
-		<h2><a href="cow.php">COW</a></h2>
-		<p>Explore our bovine inventory.</p>
-	</div>
-	<div class="box">
-		<h2><a href="bill.php">BILL</a></h2>
-		<p>View and manage billing information.</p>
-	</div> -->
-	</div>
-	
+
 <div class="content">
   	<!-- notification message -->
   	<?php if (isset($_SESSION['success'])) : ?>
