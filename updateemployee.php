@@ -36,11 +36,11 @@
                 <h3>แก้ไขemployee</h3>
                 <form action="employeeupdate.php" method="post">
                     <input type="hidden" name="employee_id" value="<?php echo $row_data['employee_id']; ?>">
-                    <label for="employee_name">ปริมาณนม:</label>
+                    <label for="employee_name">ชื่อพนักงาน:</label>
                     <input type="text" name="employee_name" value="<?php echo $row_data['employee_name']; ?>"><br><br>
-                    <label for="employee_address">เกรด:</label>
+                    <label for="employee_address">ที่อยู่:</label>
                     <input type="text" name="employee_address" value="<?php echo $row_data['employee_address']; ?>"><br><br>
-                    <label for="employee_phone">ราคา:</label>
+                    <label for="employee_phone">เบอร์โทร:</label>
                     <input type="text" name="employee_phone" value="<?php echo $row_data['employee_phone']; ?>"><br><br>
                     <input type="submit" name="submit" value="บันทึกข้อมูล"style="cursor:hand;">
                 </form>

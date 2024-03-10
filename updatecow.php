@@ -41,7 +41,7 @@
                     <label for="Quality">เกรด:</label>
                     <input type="text" name="Quality" value="<?php echo $row_data['Quality']; ?>"><br><br>
                     <label for="Price">ราคาสมาชิก:</label>
-                    <input type="text" name="Price_mem" value="<?php echo $row_data['Price']; ?>"><br><br>
+                    <input type="text" name="Price_mem" value="<?php echo $row_data['Price_mem']; ?>"><br><br>
                     <label for="Price">ราคาทั่วไป:</label>
                     <input type="text" name="Price" value="<?php echo $row_data['Price']; ?>"><br><br>
                     <input type="submit" name="submit" value="บันทึกข้อมูล"style="cursor:hand;">
