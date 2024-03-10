@@ -1,5 +1,5 @@
 <?php
-$lot_num = $_REQUEST['lot_num'];
+$bill_id = $_REQUEST['bill_id'];
 $hostname = "localhost";
 $username = "root";
 $password = "";

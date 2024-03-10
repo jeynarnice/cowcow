@@ -70,7 +70,8 @@
 <body>
 <div class="container">
     <h3>รายการขาย</h3>
-    <a class="btn" href="insertbill.php">เพิ่มรายการขาย</a>
+    <center>
+    <a class="btn" href="insertbill.php">เพิ่มรายการขาย</a></br></br></br>
     <table>
         <tr>
             <th>ลำดับ</th>
@@ -109,7 +110,7 @@
             echo '<td>'.$row_data['employee_id'].'</td>';
             echo '<td>'.$row_data['lot_num'].'</td>';
             echo '<td><a href="updatebill.php?bill_id='.$row_data['bill_id'].'">แก้ไข</a></td>';
-            echo '<td><a href="billelete.php?bill_id='.$row_data['bill_id'].'" onclick="return confirm(\'ยืนยันการลบ\')">ลบ</a></td>';
+            echo '<td><a href="billdelete.php?bill_id='.$row_data['bill_id'].'" onclick="return confirm(\'ยืนยันการลบ\')">ลบ</a></td>';
             echo '</tr>';
             $row++;
         }
@@ -117,6 +118,8 @@
         mysqli_close($conn);
         ?>
     </table>
+    <center>
+    <br><br><a href="join.php">รายการขายเพิ่มเติม</a>
     <br><br><a href="home.php">Back to menu</a>
 </div>
 </body>

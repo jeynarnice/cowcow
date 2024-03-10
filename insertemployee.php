@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>แก้ไขข้อมูลพนักงาน</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
         
@@ -26,6 +26,7 @@
         h3 {
             text-align: center;
             margin-bottom: 20px;
+            color: #d85f1b; /* Updated color */
         }
         table {
             width: 100%;
@@ -34,7 +35,7 @@
         th, td {
             border: 1px solid #ddd;
             padding: 10px;
-            text-align: center;
+            text-align: left; /* Updated alignment */
         }
         th {
             background-color: #f2f2f2;
@@ -45,27 +46,43 @@
         tr:hover {
             background-color: #f1f1f1;
         }
+        input[type="text"],
+        input[type="submit"],
+        input[type="reset"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #d85f1b; /* Updated color */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #a73e06; /* Darker shade for hover */
+        }
         a {
+            display: inline-block;
             text-decoration: none;
             color: #d85f1b; /* Updated color */
+            margin-top: 20px;
         }
         a:hover {
             text-decoration: underline;
         }
-        .btn {
-            display: inline-block;
-            padding: 8px 16px;
-            background-color: #d85f1b; /* Updated color */
-            color: #fff;
-            border-radius: 4px;
-            text-decoration: none;
-        }
-        .btn:hover {
-            background-color: #a73e06; /* Darker shade for hover */
-        }
     </style>
 </head>
-<body>
+<body><center>
 <?php
     $hostname = "localhost";
     $username = "root";
@@ -79,38 +96,34 @@
     mysqli_query($conn, "set character_set_client=utf8mb4");
     mysqli_query($conn, "set character_set_results=utf8mb4");
 ?>
-    <html>
-    <head><title>insertcow.php</title></head>
-    <body>
-        <center>
-            <form enctype="multipart/form-data" name="save" method="post" action="employeeinsert.php">
-                <br><br><table width="700" border="1" bgcolor="#ffffff">
+    <div class="container">
+        <h3>เพิ่มข้อมูลพนักงาน</h3>
+        <form enctype="multipart/form-data" name="save" method="post" action="employeeinsert.php">
+            <table>
                 <tr>
-                    <th colspan="2" bgcolor="" height="21">เพิ่มรายการ</th>
+                    <th colspan="2" bgcolor="#f2f2f2">เพิ่มรายการ</th>
                 </tr>
                 <tr>
-                    <td width="200">รหัสพนักงาน : </td>
-                    <td width="400"><input type="text" name="employee_id" size="50" maxlength="10"></td>
+                    <td>รหัสพนักงาน :</td>
+                    <td><input type="text" name="employee_id" size="50" maxlength="10"></td>
                 </tr>
                 <tr>
-                    <td width="200">ชื่อ : </td>
-                    <td width="400"><input type="text" name="employee_name" size="50" maxlength="20"></td>
+                    <td>ชื่อ :</td>
+                    <td><input type="text" name="employee_name" size="50" maxlength="20"></td>
                 </tr>
                 <tr>
-                    <td width="200">ที่อยู่ : </td>
-                    <td width="400"><input type="text" name="employee_address" size="50" maxlength="50"></td>
+                    <td>ที่อยู่ :</td>
+                    <td><input type="text" name="employee_address" size="50" maxlength="50"></td>
                 </tr>
                 <tr>
-                    <td width="200">เบอร์โทร : </td>
-                    <td width="400"><input type="text" name="employee_phone" size="50" maxlength="10"></td>
+                    <td>เบอร์โทร :</td>
+                    <td><input type="text" name="employee_phone" size="50" maxlength="10"></td>
                 </tr>
-                </table>
-                <br><input type="submit" name="submit" value="บันทึกข้อมูล" style="cursor:pointer;">
-                <input type="reset" name="reset" value="ยกเลิก" style="cursor:pointer;">
-            </form>
-            <br><br><a href="employee.php">กลับหน้าพนักงาน</a>
-        </center>
-    </body>
-    </html>
+            </table>
+            <input type="submit" name="submit" value="บันทึกข้อมูล">
+            <input type="reset" name="reset" value="ยกเลิก">
+        </form>
+        <a href="employee.php">กลับหน้าพนักงาน</a>
+    </div>
 </body>
 </html>

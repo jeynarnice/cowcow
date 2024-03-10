@@ -65,7 +65,7 @@
         }
     </style>
 </head>
-<body>
+<body><center>
 <?php
 $hostname = "localhost";
 $username = "root";
