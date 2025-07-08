@@ -13,10 +13,10 @@
     $employee_phone = $_POST['employee_phone'];
 
     $hostname = "localhost";
-    $employee_name = "root";
-    $employee_pass = "";
+    $username = "root";
+    $password = "";
     $dbName = "cowcow";
-    $conn = mysqli_connect($hostname, $employee_name, $employee_pass);
+    $conn = mysqli_connect($hostname, $username, $password);
     echo '<center>';
     if (!$conn)
         die("ไม่สามารถติดต่อกับ mySQL ได้");
